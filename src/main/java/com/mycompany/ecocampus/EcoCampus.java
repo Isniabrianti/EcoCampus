@@ -8,11 +8,11 @@ public class EcoCampus {
     static ArrayList<LaporanSampah> daftarLaporan = new ArrayList<>();
 
     static Mahasiswa mahasiswa = new Mahasiswa(
-            "Budi", "mhs", "123", "2317051001"
+            "Isni Abrianti", "Isnimhs", "2006", "2517052039"
     );
 
     static Admin admin = new Admin(
-            "Admin EcoCampus", "admin", "123", "ADM01"
+            "Admin Pak Eko", "Ekoadmin", "12345678", "ADM01"
     );
     static int nomorLaporan = 1;
 
