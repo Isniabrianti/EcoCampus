@@ -48,16 +48,16 @@ public class EcoCampusApp extends Application {
                         "Peringatan",
                         "Username dan password harus diisi!"
                 );
-            } else if (username.equals("budimhs")
-                    && password.equals("123")) {
+            } else if (username.equals("isnimhs")
+                    && password.equals("2006")) {
                 tampilkanAlert(
                         Alert.AlertType.INFORMATION,
                         "Login Berhasil",
-                        "Selamat datang, Mahasiswa Budi!"
+                        "Selamat datang, Isni!"
                 );
                 tampilkanDashboardMahasiswa(stage);
             } else if (username.equals("admin")
-                    && password.equals("123")) {
+                    && password.equals("12345678")) {
                 tampilkanAlert(
                         Alert.AlertType.INFORMATION,
                         "Login Berhasil",
@@ -72,7 +72,6 @@ public class EcoCampusApp extends Application {
                 );
             }
         });
-
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.CENTER);
         layout.setPrefWidth(350);
@@ -106,8 +105,7 @@ public class EcoCampusApp extends Application {
 
         Label judul = new Label("ECO CAMPUS");
         Label subjudul = new Label("Dashboard Mahasiswa");
-
-        Label sapaan = new Label("Halo, Budi!");
+        Label sapaan = new Label("Halo, Isni!");
         Label keterangan = new Label(
                 "Selamat datang di aplikasi EcoCampus."
         );
@@ -254,7 +252,6 @@ public class EcoCampusApp extends Application {
         });
         VBox layout = new VBox(15);
         layout.setAlignment(Pos.CENTER);
-
         layout.getChildren().addAll(
                 judul,
                 daftar,
@@ -328,7 +325,6 @@ public class EcoCampusApp extends Application {
             }
         }
         Button tombolKembali = new Button("Kembali");
-
         tombolKembali.setOnAction(event -> {
             tampilkanDashboardAdmin(stage);
         });
