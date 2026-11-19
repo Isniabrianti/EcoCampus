@@ -51,7 +51,7 @@ public class EcoCampusApp extends Application {
                 tampilkanAlert(
                         Alert.AlertType.INFORMATION,
                         "Login Berhasil",
-                        "Selamat datang, Isni!"
+                        "Selamat Datang, Isni!"
                 );
                 tampilkanDashboardMahasiswa(stage);
             } else if (username.equals("admin")
@@ -87,7 +87,7 @@ public class EcoCampusApp extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+    
     private void tampilkanAlert(
             Alert.AlertType tipe,
             String judul,
