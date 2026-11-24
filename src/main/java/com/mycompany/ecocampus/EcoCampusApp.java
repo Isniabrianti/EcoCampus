@@ -141,9 +141,19 @@ public class EcoCampusApp extends Application {
         Label judul = new Label("FORMULIR LAPORAN SAMPAH");
 
         Label labelLokasi = new Label("Lokasi");
-        TextField inputLokasi = new TextField();
-        inputLokasi.setPromptText("Masukkan lokasi sampah");
-
+        ComboBox<String> inputLokasi = new ComboBox<>();
+        inputLokasi.getItems().addAll(
+            "Dekanat",
+            "Kimia",
+            "Biologi",
+            "Ilmu Komputer",
+            "Matematika",
+            "Fisika",
+            "Mipa Terpadu",
+            "Labolatorium Terpadu"
+        );
+        inputLokasi.setPromptText("Pilih lokasi kejadian");
+        
         Label labelJenis = new Label("Jenis Sampah");
         ComboBox<String> inputJenis = new ComboBox<>();
 
@@ -168,7 +178,7 @@ public class EcoCampusApp extends Application {
         Button tombolKembali = new Button("Kembali");
 
         tombolKirim.setOnAction(event -> {
-            String lokasi = inputLokasi.getText();
+            String lokasi = inputLokasi.getValue();
             String jenis = inputJenis.getValue();
             String deskripsi = inputDeskripsi.getText();
             if (lokasi.trim().isEmpty()
